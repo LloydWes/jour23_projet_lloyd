@@ -1,0 +1,47 @@
+
+<!-- <div class="container">
+	<div class="row">
+		<div class="col-sm">
+			One of three columns
+		</div>
+		<div class="col-sm">
+			One of three columns
+		</div>
+		<div class="col-sm">
+			One of three columns
+		</div>
+	</div>
+</div> -->
+<div class="container">
+	<% i = 1 %>
+	<div class="row">
+		<% Gossip.all.each do |current_gossip| %>
+		<% row_class="col-md-4 cell" %>
+		<% case i%>
+		<%when 1 %>
+			<% row_class += " left" %>
+		<%when 2 %>
+			<% row_class += " mid" %>
+		<%when 3 %>
+			<% row_class += " rigth" %>
+		<% end %>
+			<div class="<%= row_class %>">
+				<p class="gossip">
+					<!-- <div class="cliente"> -->
+						<a href="<%= gossip_path(current_gossip.id) %>">Gossip n°<%= current_gossip.id%></a><br />
+						<%= current_gossip.user.first_name %> <%= current_gossip.user.last_name %> à dit : <br />
+						<%= current_gossip.title %><br />
+						<%= current_gossip.content %>
+					<!-- </div> -->
+				</p>
+			</div>
+			<% if i == 3 %>
+				<% i=0 %>
+				</div>
+				<div class="row">
+			<% end %>
+			<% i += 1 %>
+		<% end %>
+	</div>
+</div>
+</div>
