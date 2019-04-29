@@ -6,6 +6,7 @@ Pour télécharger mon repo
 `https://github.com/LloydWes/jour20_gossip`
 
 Petit `rails s` à la racine du projet pour lancer le serveur.
+
 Va sur `http://localhost:3000/` (modifie le port par rapport à ce qui est affiché dans la console si besoin)
 
 # README
