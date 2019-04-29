@@ -1,7 +1,7 @@
 <h1>You are looking at gossip n°<%= @gossip.id %></h1>
 <p>
 	<a href="<%= user_path(@gossip.user.id) %>"><%=@gossip.user.first_name%> <%=@gossip.user.last_name%></a><br />
-	<%=@gossip.title%><br />
-	<%=@gossip.content%><br />
+	<p>Title : <%=@gossip.title%></p><br />
+	<p>Content : <%=@gossip.content%></p><br />
 
 </p>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>TheGossipProject</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="TTjRYJ6GMD+lKXnCAXC/6X/lP6yJunluK0H80I+MAgeZ4yL8zWS1MjUqEH4vxx2PQlQoXttW8wCxUW8sErIb4Q==">
+    
+    <link rel="stylesheet" href="TheGossipProject_fichiers/bootstrap.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" media="all" href="TheGossipProject_fichiers/pages.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="TheGossipProject_fichiers/application.css" data-turbolinks-track="reload">
+    <script src="TheGossipProject_fichiers/rails-ujs.js" data-turbolinks-track="reload"></script>
+<script src="TheGossipProject_fichiers/activestorage.js" data-turbolinks-track="reload"></script>
+<script src="TheGossipProject_fichiers/turbolinks.js" data-turbolinks-track="reload"></script>
+<script src="TheGossipProject_fichiers/action_cable.js" data-turbolinks-track="reload"></script>
+<script src="TheGossipProject_fichiers/cable.js" data-turbolinks-track="reload"></script>
+<script src="TheGossipProject_fichiers/pages.js" data-turbolinks-track="reload"></script>
+<script src="TheGossipProject_fichiers/application.js" data-turbolinks-track="reload"></script>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="http://localhost:3000/">The Gossip Project</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/team">La team <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/contact">Contact <span class="sr-only">(current)</span></a>
+      </li>
+<!--       
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+   -->
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+    <p class="text-center greetings">Salut <strong>lloyd</strong> et bienvenue !</p>
+<!-- <div class="card-columns"> -->
+	<!-- <div class="container"> -->
+	<!-- <div class="card-deck"> -->
+		<div class="flex-parent d-flex flex-wrap justify-content-around">
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°79</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/37">Myriam Wuckert</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/79" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°80</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/35">Cinthia Doyle</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/80" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°81</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/35">Cinthia Doyle</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/81" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°82</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/1.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/34">Everett Streich</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/82" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°83</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/35">Cinthia Doyle</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/83" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+	<!-- </div> -->
+	<!-- <div class="card-deck"> -->
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°84</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/33">Patrick Lueilwitz</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/84" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°85</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/33">Patrick Lueilwitz</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/85" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°86</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/1.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/31">Marsha Haley</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/86" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°87</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/32">Marsha Simonis</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/87" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°88</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/36">Chris Luettgen</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/88" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+	<!-- </div> -->
+	<!-- <div class="card-deck"> -->
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°89</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/36">Chris Luettgen</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/89" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°90</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/1.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/37">Myriam Wuckert</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/90" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°91</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/40">Denver Gleason</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/91" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°92</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/1.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/33">Patrick Lueilwitz</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/92" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°93</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/34">Everett Streich</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/93" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+	<!-- </div> -->
+	<!-- <div class="card-deck"> -->
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°94</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/34">Everett Streich</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/94" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°95</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/32">Marsha Simonis</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/95" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°96</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/1.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/37">Myriam Wuckert</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/96" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°97</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/1.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/40">Denver Gleason</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/97" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°98</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/38">Miles Hegmann</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/98" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+	<!-- </div> -->
+	<!-- <div class="card-deck"> -->
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°99</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/32">Marsha Simonis</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/99" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°100</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/37">Myriam Wuckert</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/100" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°101</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/35">Cinthia Doyle</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/101" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°102</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/1.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/40">Denver Gleason</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/102" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°103</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/37">Myriam Wuckert</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/103" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+	<!-- </div> -->
+	<!-- <div class="card-deck"> -->
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°104</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/39">Miguel Cremin</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/104" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°105</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/35">Cinthia Doyle</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/105" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°106</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/1.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/36">Chris Luettgen</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/106" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°107</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/39">Miguel Cremin</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/107" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°108</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/33">Patrick Lueilwitz</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/108" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+	<!-- </div> -->
+	<!-- <div class="card-deck"> -->
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°109</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/38">Miles Hegmann</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/109" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°110</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/1.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/33">Patrick Lueilwitz</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/110" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°111</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/38">Miles Hegmann</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/111" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°112</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/31">Marsha Haley</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/112" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°113</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/35">Cinthia Doyle</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/113" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+	<!-- </div> -->
+	<!-- <div class="card-deck"> -->
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°114</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/3.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/33">Patrick Lueilwitz</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/114" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°115</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/2.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/31">Marsha Haley</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/115" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+			<div class="card-header">Gossip n°116</div>
+			<img class="card-img-top img_fl" src="TheGossipProject_fichiers/1.html" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title text-muted">Posté par <a href="http://localhost:3000/user/34">Everett Streich</a></h5>
+				<p class="card-text"></p>
+				<div class="text-center">
+					<a href="http://localhost:3000/gossip/116" class="btn btn-primary">Voir le gossip</a>
+				</div>
+			</div>
+			<div class="card-footer text-muted">Last update 2019-04-29 10:44:15</div>
+		</div>
+	<!-- </div> -->
+</div> 
+    
+  
+
+</body></html>
