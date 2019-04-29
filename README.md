@@ -1,4 +1,4 @@
-#The Gossip Project
+# The Gossip Project
 Ce petit projet a été réalisé par :
 - Lloyd WESTBURY (@Lloyd sur Slack)
 
