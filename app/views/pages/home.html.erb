@@ -6,7 +6,7 @@
 		<% Gossip.all.each do |current_gossip| %>
 		<div class="card" style="width: 18rem;">
 			<div class="card-header">Gossip n°<%=current_gossip.id%></div>
-			<img class="card-img-top" src="gossip_img/gossip-graphic.jpg" alt="Card image cap">
+			<img class="card-img-top img_fl" src="gossip_img/<%= rand(1..3)%>" alt="Card image cap">
 			<div class="card-body">
 				<h5 class="card-title text-muted">De : <a href="<%= user_path(current_gossip.user.id) %>"><%=current_gossip.user.first_name%> <%=current_gossip.user.last_name%></a></h5>
 				<p class="card-text"><%=current_gossip.content%></p>

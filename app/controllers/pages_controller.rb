@@ -13,4 +13,6 @@ class PagesController < ApplicationController
   def user_profil
     @user = User.find(params['id'])
   end
+  def form_filled
+  end
 end

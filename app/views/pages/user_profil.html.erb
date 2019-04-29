@@ -1,4 +1,4 @@
-<h1>Profil n°<%= @user.id %></h1>
+<!-- <h1>Profil n°<%= @user.id %></h1>
 <p>
 	<%= @user.first_name %><br />
 	<%= @user.last_name%><br />
@@ -8,4 +8,28 @@
 	<%= @user.updated_at%><br />
 
 
-</p>
+</p> -->
+<div class="global">
+	<div class="profil-header">
+		<div class="picture img-responsive">
+			<img src="../user_pic/images<%= rand(1..7) %>.jpeg"/>
+		</div>
+		<div class="user-info">
+			<p class="name"><%= @user.first_name %> <%= @user.last_name %></p>
+			<p class="age"><%= @user.age %> ans</p>
+			<p class="email"><%= @user.email %></p>
+			<p class="created_at"><%= @user.created_at.to_s.split(" ")[0...-1].join(" ") %></p>
+		</div>
+	</div>
+	<div class="gossips">
+		<div class="presentation">
+			<p>Visualisez les gossips de <%= @user.first_name %></p>
+		</div>
+		<% @user.gossips.each do |current_gossip| %>
+		<div class="gossip">
+			<p><%= current_gossip.title %></p>
+			<p><%= current_gossip.content %></p>
+		</div>
+		<% end %>
+	</div>
+</div>
