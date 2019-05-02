@@ -1,0 +1,45 @@
+<% i = 1 %>
+<div class="flex-parent d-flex flex-wrap justify-content-around">
+	<% Gossip.all.reverse.each do |current_gossip| %>
+	<div class="card" style="width: 18rem;">
+		<% already_liked = Like.where(gossip_id: current_gossip.id, user_id: session['user_id']).any? %>
+		<div class="card-header flex-row justify-content-between">Gossip n°<%=current_gossip.id%> 
+			<a href="
+			<% if already_liked == true %>
+			<%= like_path(Like.find_by(gossip_id: current_gossip.id, user_id: session['user_id']).id) %>
+			"
+			data-method='delete'
+			<% else %>
+			<%= likes_path %>
+			"
+			data-method='post'
+			<% end %>
+			class="btn 
+			<% if session['user_id'] %>
+			<% if already_liked == true %>
+			active btn-success
+			<% else %>
+			btn-outline-primary
+			<% end %>
+			<% else %>
+			disabled btn-outline-primary
+			<% end %>
+			"><%= current_gossip.likes.count%></a>
+		</div>
+		<%=image_tag("gossip_img/index" + rand(1..4).to_s, class:"card-img-top img_fl", alt:"Card image cap")%>
+		<div class="card-body">
+			<h5 class="card-title text-muted">Posté par <a href="<%= user_path(current_gossip.user.id) %>"><%=current_gossip.user.first_name%> <%=current_gossip.user.last_name%></a></h5>
+			<p class="card-text"><%current_gossip.content%></p>
+			<div class="text-center">
+				<a href="<%= gossip_path(current_gossip.id) %>" class="btn btn-primary">Voir le gossip</a>
+			</div>
+		</div>
+		<div class="card-footer text-muted">Last update <%=current_gossip.updated_at.to_s.split(" ")[0...-1].join(" ") %></div>
+	</div>
+	<%puts "i=#{i}"%>
+	<% if i==5 %>
+	<% i = 1 %>
+	<% end %>
+	<% i += 1 %>
+	<% end %>
+</div>

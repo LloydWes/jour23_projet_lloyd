@@ -7,10 +7,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href=<%=team_path%>>La team <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href=<%=team_path%>>La team<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href=<%=contact_path%>>Contact <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href=<%=new_contact_path%>>Contact<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href=<%=new_gossip_path%>>Créer un gossip<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href=<%=cities_path%>>Villes<span class="sr-only">(current)</span></a>
       </li>
 <!--       
       <li class="nav-item">
@@ -30,11 +36,33 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
-   -->
-    </ul>
+    -->
+  </ul>
    <!--  <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> -->
+    <span class="navbar-text">
+
+      <% if session['user_id'] %>
+
+      <a href="<%= user_path(current_user.id) %>" class='border border-success text-center'><%= current_user.first_name %> <%= current_user.last_name %></a>
+      <%= link_to "Se déconnecter", session_path(session[:user_id]), method: :delete, class: 'btn btn-warning'%>
+
+      <% else %>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Rejoignez-nous
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a href="<%= new_session_path %>" class="dropdown-item btn btn-outline-success">Se connecter</a>
+          <a href="<%= new_user_path %>" class="dropdown-item btn btn-success">S'inscrire</a>
+        </div>
+      </div>
+
+      <% end %>
+      
+    </span>
   </div>
 </nav>

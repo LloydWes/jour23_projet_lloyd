@@ -1,0 +1,30 @@
+<div class="container">
+	<%= form_for @user, method: :post do |f| %>
+	<%= label_tag("first_name", "Votre prénom") %>
+	<%= f.text_field :first_name %>
+	<%= label_tag("last_name", "Votre nom") %>
+	<%= f.text_field :last_name %>
+	<%= label_tag("age", "Votre age") %>
+	<%= f.text_field :age %>
+	<%= label_tag("email", "Votre email") %>
+	<%= f.text_field :email %>
+	<%= label_tag("password", "Votre mot de passe") %>
+	<%= f.text_field :password %>
+	<%= label_tag("password_confirmation", "Confirmation du mot de pass") %>
+	<%= f.text_field :password_confirmation %>
+	<% city_array = Array.new %>
+	<% City.all.each do |city| city_array << [ city.name, city.id ] end%>
+	<%= label_tag("city", "Votre ville") %>
+	<%= select_tag('city_id', options_for_select( city_array , City.first.id ) ) %>
+	<div class="form-group text-center">
+		<%= submit_tag('Envoyer', class:'btn btn-success') %>
+	</div>
+	<div>
+		<% if flash.any? %>
+		<% flash.each do |key, value| %>
+		<%= "Erreur : " + value %>
+		<% end %>
+		<% end %>
+	</div>
+	<% end %>
+</div>

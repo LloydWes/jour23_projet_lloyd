@@ -1,23 +1,13 @@
-<!-- <h1>Profil n°<%= @user.id %></h1>
-<p>
-	<%= @user.first_name %><br />
-	<%= @user.last_name%><br />
-	<%= @user.age%><br />
-	<%= @user.email%><br />
-	<%= @user.created_at%><br />
-	<%= @user.updated_at%><br />
-
-
-</p> -->
 <div class="global">
 	<div class="profil-header">
 		<div class="picture img-responsive">
-			<%= image_tag("user_pic/images" + rand(1..7).to_s)%><!--<img src="../user_pic/images<%= rand(1..7) %>.jpeg"/>-->
+			<%= image_tag("user_pic/images1") %><!--<img src="../user_pic/images<%= rand(1..7) %>.jpeg"/>-->
 		</div>
 		<div class="user-info">
 			<p class="name"><%= @user.first_name %> <%= @user.last_name %></p>
 			<p class="age"><%= @user.age %> ans</p>
 			<p class="email"><%= @user.email %></p>
+			<a href="<%= city_path(@user.city.id) %>"><p class="email"><%= @user.city.name %></p></a>
 			<p class="created_at">Inscrit depuis le : <%= @user.created_at.to_s.split(" ")[0...-1].join(" ") %></p>
 		</div>
 	</div>

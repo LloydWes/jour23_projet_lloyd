@@ -1,0 +1,16 @@
+<div class="container">
+	<p class="text-uppercase font-weight-bold">Login</p>
+	<%= form_tag sessions_path, method: 'post' do %>
+	<label>Email : </label>
+	<input type="text" name="email"% class="form-control" />
+	<label>Mot de passe : </label>
+	<input type="password" name="password" class="form-control" />
+	<input type="submit" class="btn btn-success" />
+	<% end %>
+	<p><% if flash.any? %>
+		<% flash.each do |key, value| %>
+		<%= "Erreur : " + value %>
+		<% end %>
+		<% end %>
+	</p>
+</div>

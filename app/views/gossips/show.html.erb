@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>You are looking at gossip n°<%= @gossip.id %></h1>
+	<div class="form-group">
+		<a href="<%= user_path(@gossip.user.id) %>"><%=@gossip.user.first_name%> <%=@gossip.user.last_name%></a><br />
+		<p>Title : <%=@gossip.title%></p><br />
+		<p>Content : <%=@gossip.content%></p><br />
+		<% if current_user.id == @gossip.user_id %>
+		<a href="<%= gossip_path %>" class="btn btn-danger" data-method="DELETE">Supprimer le gossip</a>
+		<a href="<%= edit_gossip_path %>" class="btn btn-warning">Editer le gossip</a>
+		<% end %>
+	</div>
+</div>
+<div class="comments-section container">
+	<p>Espace commantaires : <%= @gossip.comments.count %> commentaires pour ce gossip !</p>
+	
+	<%= render file: 'app/views/comments/index' %>
+	<%= render file: 'app/views/comments/new' %>
+</div>

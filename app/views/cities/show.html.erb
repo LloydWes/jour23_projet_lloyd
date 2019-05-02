@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="form-group">
+		<div class="form-group text-center">
+			<a href="<%= cities_path %>"><%= @city.name %></a>
+		</div>
+		<% @city.users.each do |user| %>
+		<div class="form-group border">
+			<% user.gossips.each do |gossip| %>
+			Auteur : <%= user.first_name %> <%= user.last_name %><br />
+			Titre : <%= gossip.title %><br />
+			Content : <%= gossip.content %><br /><br />
+			<% end %>
+		</div>
+		<% end %>
+	</div>
+</div>

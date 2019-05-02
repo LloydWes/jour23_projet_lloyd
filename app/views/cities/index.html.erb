@@ -1,0 +1,30 @@
+<div class='container'>
+	<div class="form-group">
+		<% @all_cities_array.each do |city| %>
+		<p>
+			Ville : <a href="<%= city_path(city.id) %>"><%= city.name %></a>
+			<div class="city-block border">
+				<% if city.users.any? %>
+				<% city.users.each do |user| %>
+				<p>
+					<% user.gossips.each do |gossip| %>
+					<a href="<%= city_path(gossip.user.city_id) %>">
+						<div>
+							Auteur : <%= gossip.user.first_name %> <%= gossip.user.last_name %><br /> 
+							Titre : <%= gossip.title %><br />
+							Contenu : <%= gossip.content %><br /><br />
+						</div>
+					</a>
+					<% end %>
+				</p></a>
+				<% end %>
+				<% else %>
+				<p>
+					Pas de gossip pour cette ville
+				</p>
+				<% end %>
+			</div>
+		</p>
+		<% end %>
+	</div>
+</div>

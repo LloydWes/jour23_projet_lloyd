@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 puts "Début du seed"
+Like.destroy_all
+Comment.destroy_all
 PrivateMessage.destroy_all
 JoinTagsGossip.destroy_all
 Gossip.destroy_all
@@ -24,7 +26,7 @@ puts __LINE__
 #Fill users
 puts __LINE__
 10.times do
-  User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: rand(12..50), email: Faker::Internet.email, city_id: City.all.sample.id)
+  User.create!(password: 'thp', first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: rand(12..50), email: Faker::Internet.email, city_id: City.all.sample.id)
 end
 puts __LINE__
 
@@ -59,7 +61,7 @@ gossips_array = [
 ]
 gossips_array.each do |current_hash|
   current_hash.each_pair do |key,value|
-  Gossip.create!(title: "Importation du projet gossip précédent", content: value, user_id: User.all.sample.id)
+    Gossip.create!(title: "Importation du projet gossip précédent", content: value, user_id: User.all.sample.id)
   end
 end
 puts __LINE__
@@ -101,4 +103,31 @@ puts __LINE__
   PrivateMessage.create(content: Faker::Lorem.paragraph, recipient_id: recipient, sender_id: sender)
 end
 puts __LINE__
+
+
+
+puts __LINE__
+100.times do
+  Comment.create(content: Faker::Lorem.paragraph, gossip_id: Gossip.all.sample.id, author: Faker::Name.name)
+end
+puts __LINE__
+
+
+
+puts __LINE__
+200.times do
+  Like.create(user_id: User.all.sample.id, gossip_id: Gossip.all.sample.id)
+end
+puts __LINE__
 puts "Seed est terminé"
+
+puts "Printing tables count"
+print "Like.count : ", Like.count, "\n"
+print "Comment.count : ", Comment.count, "\n"
+print "PrivateMessage.count : ", PrivateMessage.count, "\n"
+print "JoinTagsGossip.count : ", JoinTagsGossip.count, "\n"
+print "Gossip.count : ", Gossip.count, "\n"
+print "Tag.count : ", Tag.count, "\n"
+print "User.count : ", User.count, "\n"
+print "City.count : ", City.count, "\n"
+puts "Done"

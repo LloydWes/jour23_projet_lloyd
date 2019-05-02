@@ -1,0 +1,15 @@
+<div class="container">
+	<h1>Page de contact</h1>
+	<form action="<%=contacts_path%>" method="post">
+		<input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+		<label>Ton pseudo</label>
+		<input type="text" placeholder="ton pseudo" class='form-control'>
+		<label>Ton email</label>
+		<input type="text" placeholder="ton email" class='form-control'>
+		<label>Ton message</label>
+		<textarea placeholder="ton message"></textarea>
+		<div class="form-group text-center">
+			<input type="submit" name="Envoyer" class="btn btn-success">
+		</div>
+	</form>
+</div>

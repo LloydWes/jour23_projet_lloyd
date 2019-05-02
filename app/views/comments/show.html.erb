@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="gossip-bloc">
+
+		<div class="form-group">
+			<a href="<%= user_path(@related_gossip.user.id) %>"><%=@related_gossip.user.first_name%> <%=@related_gossip.user.last_name%></a><br />
+			<p>Title : <%=@related_gossip.title%></p><br />
+			<p>Content : <%=@related_gossip.content%></p><br />
+		</div>
+
+	</div>
+	<div class="comment-bloc">
+		<p>Espace commantaires : </p>
+		<%= @comment.author %>
+		<%= @comment.content %>
+		<a href="<%= gossip_comment_path %>" class="btn btn-danger" data-method="DELETE">Supprimer le commantaire</a>
+		<a href="<%= edit_gossip_comment_path %>" class="btn btn-warning">Editer le commentaire</a>
+	</div>
+</div>
+

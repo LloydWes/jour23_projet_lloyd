@@ -1,0 +1,10 @@
+<% if flash['errors'].any? %>
+	<h3>Oups on dirait qu'il y a eu un problème, le gossip n'a pas été crée</h3>
+	<p>
+		<% flash['errors'].each do |section| %>
+			
+		<% end %>
+	</p>
+<% else %>
+	<h3>Le gossip a été crée avec succès</h3>
+<% end %>

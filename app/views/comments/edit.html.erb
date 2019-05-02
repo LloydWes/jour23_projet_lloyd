@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="form-group">
+		<%= form_tag url_for(action: 'update'), method: 'patch' do %>
+<label>Contenu : </label>
+<input type="text" name="comment_content" value="<%= @edit_gossip_comment.content %>"/>
+<div class="form-group text-center">
+	<input type="submit" name="Modifier" class="btn btn-success">
+</div>
+<% end %>
+	</div>
+</div>
+
