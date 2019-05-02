@@ -3,11 +3,24 @@ Ce petit projet a été réalisé par :
 - Lloyd WESTBURY (@Lloyd sur Slack)
 
 Pour télécharger mon repo
-`https://github.com/LloydWes/jour20_gossip`
+`git clone https://github.com/LloydWes/jour20_gossip`
 
-Petit `rails s` à la racine du projet pour lancer le serveur.
+A la racine du projet
+
+`rails db:drop` pour être sûr que tout se passe bien
+
+`rails db:migrate` 
+
+`rails db:seed` pour remplir les différentes tables
+
+Petit `rails s` pour lancer le serveur.
 
 Va sur `http://localhost:3000/` (modifie le port par rapport à ce qui est affiché dans la console si besoin)
+
+
+Pour te connecter tu peux :
+- Créer un compte en cliquant sur le drop Rejoignez-nous
+- Faire un `rails c` pour aller dans le console rails puis `tp User.all` tu prends l'adresse mail d'un user le mot de passe de tout les users généré par le seed est thp (en minuscule)
 
 # README
 
