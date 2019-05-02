@@ -3,7 +3,7 @@ Ce petit projet a été réalisé par :
 - Lloyd WESTBURY (@Lloyd sur Slack)
 
 Pour télécharger mon repo
-`git clone https://github.com/LloydWes/jour20_gossip`
+`git clone https://github.com/LloydWes/jour23_projet_lloyd`
 
 A la racine du projet
 
