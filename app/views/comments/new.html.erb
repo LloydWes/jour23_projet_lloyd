@@ -1,7 +1,6 @@
+	<% if session['user_id'] %>
 	<div class="comment-form">
 		<%= form_for [@gossip, @comment] do |f| %>
-		<label>Ton pseudo</label>
-		<%= f.text_field :author, class: 'form-control' %>
 		<label>Ton message : </label>
 		<%= f.text_field :content, class: 'form-control' %>
 		<%= f.text_field :gossip_id, value: @gossip.id, type: 'hidden'%>
@@ -10,3 +9,8 @@
 		</div>
 		<% end %>
 	</div>
+	<% else %>
+	<div>
+		Tu dois être connecté pour rédiger un commentaire
+	</div>
+	<% end %>

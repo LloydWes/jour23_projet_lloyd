@@ -10,10 +10,12 @@
 	</div>
 	<div class="comment-bloc">
 		<p>Espace commantaires : </p>
-		<%= @comment.author %>
+		<%= @comment.user.first_name %> <%= @comment.user.last_name %>
 		<%= @comment.content %>
+		<% if current_user.id == @comment.user_id %>
 		<a href="<%= gossip_comment_path %>" class="btn btn-danger" data-method="DELETE">Supprimer le commantaire</a>
 		<a href="<%= edit_gossip_comment_path %>" class="btn btn-warning">Editer le commentaire</a>
+		<% end %>
 	</div>
 </div>
 

@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
-puts "Début du seed"
+print "-"*10, "Seed has begun", "-"*10, "\n"
 Like.destroy_all
 Comment.destroy_all
 PrivateMessage.destroy_all
@@ -15,7 +15,7 @@ Gossip.destroy_all
 Tag.destroy_all
 User.destroy_all
 City.destroy_all
-puts "Toutes les tables ont été vidées"
+puts "All tables have been destroyed"
 #Fill cities
 puts __LINE__
 10.times do
@@ -24,7 +24,6 @@ end
 puts __LINE__
 
 #Fill users
-puts __LINE__
 10.times do
   User.create!(password: 'thp', first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: rand(12..50), email: Faker::Internet.email, city_id: City.all.sample.id)
 end
@@ -32,7 +31,6 @@ puts __LINE__
 
 
 #fill tags
-puts __LINE__
 10.times do
   Tag.create!(title: Faker::Verb.simple_present)
 end
@@ -68,14 +66,12 @@ puts __LINE__
 20.times do
   Gossip.create!(title: Faker::Lorem.sentence, content: Faker::Lorem.paragraph, user_id: User.all.sample.id)
 end
-puts __LINE__
 
 #Fill join_tags_gossips
 puts __LINE__
 100.times do
   JoinTagsGossip.create!(tag_id: Tag.all.sample.id, gossip_id: Gossip.all.sample.id)
 end
-puts __LINE__
 
 # #Fill city_id in users
 # puts __LINE__
@@ -102,15 +98,13 @@ puts __LINE__
   end
   PrivateMessage.create(content: Faker::Lorem.paragraph, recipient_id: recipient, sender_id: sender)
 end
-puts __LINE__
 
 
 
 puts __LINE__
 100.times do
-  Comment.create(content: Faker::Lorem.paragraph, gossip_id: Gossip.all.sample.id, author: Faker::Name.name)
+  Comment.create(content: Faker::Lorem.paragraph, gossip_id: Gossip.all.sample.id, user_id: User.all.sample.id)
 end
-puts __LINE__
 
 
 
@@ -121,7 +115,7 @@ end
 puts __LINE__
 puts "Seed est terminé"
 
-puts "Printing tables count"
+print "\n", "-"*10, "Printing tables count", "-"*10, "\n"
 print "Like.count : ", Like.count, "\n"
 print "Comment.count : ", Comment.count, "\n"
 print "PrivateMessage.count : ", PrivateMessage.count, "\n"
@@ -131,3 +125,4 @@ print "Tag.count : ", Tag.count, "\n"
 print "User.count : ", User.count, "\n"
 print "City.count : ", City.count, "\n"
 puts "Done"
+print "-"*10, "Seed is done", "-"*10, "\n"

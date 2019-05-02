@@ -9,11 +9,15 @@ class SessionsController < ApplicationController
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
     end
+    
+    redirect_to '/'
   end
   def destroy
     puts "$"*60
     # session.delete('user_id')
     reset_session
+
+    redirect_to request.headers["HTTP_REFERER"]
     # render request.env['PATH_INFO']
   
     # render 'new'

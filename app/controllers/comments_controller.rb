@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
     puts "!"*60, params['comment_content']
     content = params['comment_content']
     # comment_params = params.require(:comment).permit(:content)
-    comment_to_edit = Comment.update(content: params['comment_content'])
+    comment_to_edit = Comment.find_by(id: params['id']).update(content: params['comment_content'])
   end
   def new
     # @gossip = Gossip.all.sample
@@ -35,7 +35,8 @@ class CommentsController < ApplicationController
   end
   def create
     puts "^"*60
-    comment_params = params.require(:comment).permit(:content, :author, :gossip_id)
+    comment_params = params.require(:comment).permit(:content, :gossip_id)
+    comment_params['user_id'] = current_user.id
     # comment_params['gossip_id']
     puts comment_params
     if comment_params.permitted?

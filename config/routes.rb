@@ -5,13 +5,13 @@ Rails.application.routes.draw do
 
   resources :gossips do
     resources :comments
+    resources :likes, only: [:update]
   end
   # resolve('Gossip') {[:create_gossip]}
   resources :users, only: [:show, :new, :create]
   resources :contacts, only: [:create, :new]  
   resources :cities, only: [:show, :index]
   resources :sessions
-  resources :likes, only: [:new, :create, :destroy]
   # get 'contact', to: 'pages#contact'
   # get '/gossip/:id', to: 'pages#gossip_display', as: 'gossip'
   # get 'user/:id', to: 'pages#user_profil', as: 'user'

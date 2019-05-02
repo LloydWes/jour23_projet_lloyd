@@ -1,18 +1,39 @@
+<% already_liked = Like.where(gossip_id: @gossip.id, user_id: session['user_id']).any? %>
 <div class="container">
-	<h1>You are looking at gossip n°<%= @gossip.id %></h1>
-	<div class="form-group">
-		<a href="<%= user_path(@gossip.user.id) %>"><%=@gossip.user.first_name%> <%=@gossip.user.last_name%></a><br />
-		<p>Title : <%=@gossip.title%></p><br />
-		<p>Content : <%=@gossip.content%></p><br />
-		<% if current_user.id == @gossip.user_id %>
-		<a href="<%= gossip_path %>" class="btn btn-danger" data-method="DELETE">Supprimer le gossip</a>
-		<a href="<%= edit_gossip_path %>" class="btn btn-warning">Editer le gossip</a>
-		<% end %>
-	</div>
-</div>
-<div class="comments-section container">
-	<p>Espace commantaires : <%= @gossip.comments.count %> commentaires pour ce gossip !</p>
-	
-	<%= render file: 'app/views/comments/index' %>
-	<%= render file: 'app/views/comments/new' %>
-</div>
+	<h1>You are looking at gossip n°<%= @gossip.id %>
+		
+		<% if already_liked == true %>
+		<a href="<%= gossip_like_path(gossip_id: @gossip.id, id: Like.where(gossip_id: @gossip.id, user_id: session['user_id']).first.id) %>" data-method="patch"
+			<% else %>
+			<a href="<%= gossip_like_path(gossip_id: @gossip.id, id: (Like.last.id + 1).to_i) %>" data-method="patch"
+				<% end %>
+				class="btn 
+				<% if session['user_id'] %>
+				<% if already_liked == true %>
+				active btn-success
+				<% else %>
+				btn-outline-primary
+				<% end %>
+				<% else %>
+				disabled btn-outline-primary
+				<% end %>
+				"><%= @gossip.likes.count%></a>
+
+
+			</h1>
+			<div class="form-group">
+				<a href="<%= user_path(@gossip.user.id) %>"><%=@gossip.user.first_name%> <%=@gossip.user.last_name%></a><br />
+				<p>Title : <%=@gossip.title%></p><br />
+				<p>Content : <%=@gossip.content%></p><br />
+				<% if current_user.id == @gossip.user_id %>
+				<a href="<%= gossip_path %>" class="btn btn-danger" data-method="DELETE">Supprimer le gossip</a>
+				<a href="<%= edit_gossip_path %>" class="btn btn-warning">Editer le gossip</a>
+				<% end %>
+			</div>
+		</div>
+		<div class="comments-section container">
+			<p>Espace commantaires : <%= @gossip.comments.count %> commentaires pour ce gossip !</p>
+
+			<%= render file: 'app/views/comments/index' %>
+			<%= render file: 'app/views/comments/new' %>
+		</div>

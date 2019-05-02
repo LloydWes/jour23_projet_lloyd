@@ -13,7 +13,7 @@ before_action :authenticate_user, only: [:new]
     user = User.all.sample.id
     # puts user
     goss_params = params.require(:gossip).permit(:title, :content)
-    goss_params['user_id'] = user
+    goss_params['user_id'] = current_user.id
     # puts goss_params
     # @goss = Gossip.create(goss_params)
     # @gossip = Gossip.create(title: params['gossip_title'],content: params['gossip_content'], user_id: User.all.sample.id)

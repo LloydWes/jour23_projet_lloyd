@@ -1,7 +1,7 @@
 <div class="display-comment">
 	<% @comments_array.each do |comment| %>
 	<a href="<%= gossip_comment_path(gossip_id: @gossip.id, id: comment.id) %>">
-		<p>De : <%= comment.author %></p>
+		<p>De : <%= comment.user.first_name %> <%= comment.user.last_name %></p>
 		<p><%= comment.content %></p>
 	</a>
 	<% end %>
