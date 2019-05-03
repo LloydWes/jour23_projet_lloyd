@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       render 'new'
     end
     
-    redirect_to '/'
+    # redirect_to '/'
   end
   def destroy
     puts "$"*60
