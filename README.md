@@ -9,6 +9,8 @@ A la racine du projet
 
 `rails db:drop` pour être sûr que tout se passe bien
 
+`rails db:create` pour recréer les bases
+
 `rails db:migrate` pour créer les tables
 
 `rails db:seed` pour remplir les différentes tables
